@@ -1,0 +1,109 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0c1d015b2eb6f01a05cf197d8f3e80397388275fc9cfe539d2e48f4bf6b48d78
+
+name:           HaskellDatabase
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/HaskellDatabase#readme>
+homepage:       https://github.com/githubuser/HaskellDatabase#readme
+bug-reports:    https://github.com/githubuser/HaskellDatabase/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/HaskellDatabase
+
+library
+  exposed-modules:
+      Config
+      Database
+      Lib
+  other-modules:
+      Paths_HaskellDatabase
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , conduit
+    , monad-control
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , resource-pool
+    , servant-server
+    , string-conversions
+    , text
+    , wai
+    , wai-extra
+    , warp
+  default-language: Haskell2010
+
+executable HaskellDatabase-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HaskellDatabase
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellDatabase
+    , aeson
+    , base >=4.7 && <5
+    , conduit
+    , monad-control
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , resource-pool
+    , servant-server
+    , string-conversions
+    , text
+    , wai
+    , wai-extra
+    , warp
+  default-language: Haskell2010
+
+test-suite HaskellDatabase-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HaskellDatabase
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellDatabase
+    , aeson
+    , base >=4.7 && <5
+    , conduit
+    , monad-control
+    , monad-logger
+    , mtl
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , resource-pool
+    , servant-server
+    , string-conversions
+    , text
+    , wai
+    , wai-extra
+    , warp
+  default-language: Haskell2010

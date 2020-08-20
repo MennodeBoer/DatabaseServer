@@ -1,0 +1,4 @@
+.stack-work/
+*~
+test.db
+stack.yaml.lock
